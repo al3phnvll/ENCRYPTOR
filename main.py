@@ -47,12 +47,12 @@ def message_encrypt(user_message):
 
 def main():
 
-    encrypt_choice = input("Do you want to work with a file or just a message")
+    encrypt_choice = input("Do you want to work with a file or just a message: ")
     if encrypt_choice.lower() == "f":
 
         fileencrypt()
     elif encrypt_choice.lower() == "m":
-        user_message = input("message you wnat to encrypt /decrypt")
+        user_message = input("message you wnat to encrypt /decrypt: ")
         message_encrypt(user_message)
 
 if __name__ == "__main__":
