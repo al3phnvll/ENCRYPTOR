@@ -2,7 +2,7 @@ import os
 from fernet_cipher import Crypt
 
 class FileOps:
-    @classmethod
+    @staticmethod
     def read_file(cls,path,key,choice):
         encrypted_list = []
         with open(path, "r") as f:
@@ -19,7 +19,7 @@ class FileOps:
                 encrypted_list.append(Crypt.decrypt(byte_line,key))
         return encrypted_list
     
-    @classmethod
+    @staticmethod
     def write_file(cls,path,key,choice):
         encrypted_list = FileOps.read_file(path,key,choice)
         with open(path , "w") as writefile:
